@@ -19,12 +19,8 @@ export function AnimatedBackground() {
   useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove)
     
-    // Désactiver l'animation après 30 secondes pour économiser les ressources
-    const timer = setTimeout(() => setIsEnabled(false), 30000)
-
     return () => {
       window.removeEventListener('mousemove', handleMouseMove)
-      clearTimeout(timer)
     }
   }, [handleMouseMove])
 
