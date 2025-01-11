@@ -12,16 +12,37 @@ export function Experience() {
     {
       date: "2022 — PRESENT",
       title: "Software Engineer",
-      company: "SEGULA TECHNOLOGIES",
-      description: "Leading the development of Web 3.0 marketplaces and integrating cutting-edge AI technologies. Building robust systems on AWS and implementing advanced algorithms for data processing.",
-      technologies: ["Python", "React", "AWS", "AI/ML"]
+      company: "SEGULA TECHNOLOGIE",
+      description: "Led the development of a scalable Web 3.0 marketplace using Next.js and microservices architecture on AWS. Built data scraping pipelines, integrated LLMs for automated classification, and implemented advanced semantic search algorithms.",
+      technologies: ["Next.js", "AWS", "Python", "LLMs", "Microservices"]
+    },
+    {
+      date: "2022",
+      title: "Fullstack Software Engineer",
+      company: "GAWL, Paris",
+      description: "Developed an IPTV subscriber management system using Django and PostgreSQL. Created real-time dashboards with Pandas and AWS CloudWatch, maintained CI/CD pipeline for agile development.",
+      technologies: ["Django", "PostgreSQL", "Pandas", "AWS CloudWatch", "CI/CD"]
     },
     {
       date: "2020 — 2022",
-      title: "Software Engineer",
+      title: "Freelance Developer",
       company: "Freelance",
-      description: "Developed custom web applications and AI-powered solutions for various clients. Provided technical consulting and implemented scalable architectures.",
-      technologies: ["Python", "Django", "React", "Node.js"]
+      description: "Designed and developed websites for IAAS Senegal, BestBira Events, and Cabinet Audit 360. Built a Safety Quality Environment platform with QR code generation and developed the Eiffage website, improving user engagement by 10%.",
+      technologies: ["Next.js", "React", "Node.js", "QR Code", "UX/UI"]
+    },
+    {
+      date: "2017 — 2019",
+      title: "Fullstack Engineer",
+      company: "SEDIMA GROUP",
+      description: "Built an internal e-commerce platform using Django and PostgreSQL for staff orders. Developed an incident management platform with automated workflows for streamlined reporting and resolution.",
+      technologies: ["Django", "PostgreSQL", "Automation", "Workflow Management"]
+    },
+    {
+      date: "2017",
+      title: "Backend Software Engineer",
+      company: "Emc2 Group",
+      description: "Developed a Django-based platform for alumni engagement with user authentication. Provided comprehensive testing, documentation, and user training, ensuring high platform adoption.",
+      technologies: ["Django", "Authentication", "Testing", "Documentation"]
     }
   ]
 
