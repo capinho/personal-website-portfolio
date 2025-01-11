@@ -1,4 +1,4 @@
-# Personal Portfolio Website
+# Personal Portfolio - Pape Ibrahima Diawara
 
 ![Next.js](https://img.shields.io/badge/Next.js-13-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
@@ -105,4 +105,16 @@ This project is licensed under the MIT License.
 
 Feel free to reach out if you have any questions or just want to connect!
 
-[GitHub](https://github.com/capinho) | [LinkedIn](Your LinkedIn URL)
+- 👨‍💻 **Name**: Pape Ibrahima Diawara
+- 💼 **Role**: Software Engineer
+- 🔗 **LinkedIn**: [Pape Ibrahima Diawara](https://www.linkedin.com/in/pape-ibrahima-diawara/)
+- 📧 **Email**: [papeibrahima.diawara@outlook.com](mailto:papeibrahima.diawara@outlook.com)
+- 🌐 **GitHub**: [capinho](https://github.com/capinho)
+- 🌍 **Portfolio**: [https://personal-website-portfolio.vercel.app/](https://personal-website-portfolio.vercel.app/)
+
+## 📸 Screenshots
+
+![Portfolio Dark Mode](public/portfolio-dark.png)
+![Portfolio Light Mode](public/portfolio-light.png)
+
+*Note: Screenshots will be added once the site is deployed.*
