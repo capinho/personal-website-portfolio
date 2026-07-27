@@ -11,7 +11,7 @@
     "test": "tsx --test tests/contact-security.test.ts"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": "22.x"
   },
   "overrides": {
     "postcss": "$postcss",
