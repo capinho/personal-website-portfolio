@@ -7,47 +7,47 @@ import './globals.css'
 export const metadata: Metadata = {
   title: {
     template: '%s | Pape Ibrahima Diawara',
-    default: 'Pape Ibrahima Diawara - Software Engineer',
+    default: 'Pape Ibrahima Diawara - Performance Analytics & Data Platforms',
   },
-  description: 'Software engineer with experience in building high-quality web applications.',
+  description: 'Software engineer specializing in performance analytics, data platforms, and backend engineering.',
   keywords: [
     'Software Engineer',
-    'Full Stack Developer',
+    'Performance Analytics',
+    'Performance Engineering',
     'Data Engineer',
     'Python Developer',
-    'React Developer',
-    'Next.js',
+    'Backend Engineer',
+    'Data Platforms',
+    'Telemetry Analysis',
     'Django',
+    'FastAPI',
     'AWS',
-    'Machine Learning',
-    'AI Applications',
-    'Web Development',
     'Data Engineering',
     'Paris',
     'France'
   ],
-  authors: [{ name: 'Pape DIAWARA', url: 'https://pidiawara.co' }],
+  authors: [{ name: 'Pape DIAWARA', url: 'https://pidiawara.com' }],
   creator: 'Pape DIAWARA',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://pidiawara.co',
-    title: 'Pape DIAWARA - Software Engineer',
-    description: 'Software Engineer specializing in full-stack development, data engineering, and AI applications.',
+    url: 'https://pidiawara.com',
+    title: 'Pape DIAWARA - Performance Analytics & Data Platforms',
+    description: 'Software engineer specializing in performance analytics, data platforms, and backend engineering.',
     siteName: 'Pape DIAWARA Portfolio',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Pape DIAWARA - Software Engineer'
+        alt: 'Pape DIAWARA - Performance Analytics & Data Platforms'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pape DIAWARA - Software Engineer',
-    description: 'Software Engineer specializing in full-stack development, data engineering, and AI applications.',
+    title: 'Pape DIAWARA - Performance Analytics & Data Platforms',
+    description: 'Software engineer specializing in performance analytics, data platforms, and backend engineering.',
     images: ['/og-image.png']
   },
   robots: {
@@ -76,8 +76,11 @@ export const metadata: Metadata = {
     ]
   },
   manifest: '/site.webmanifest',
-  themeColor: '#0a192f',
-  metadataBase: new URL('https://pidiawara.co'),
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f6f8f6' },
+    { media: '(prefers-color-scheme: dark)', color: '#101412' }
+  ],
+  metadataBase: new URL('https://pidiawara.com'),
   alternates: {
     canonical: '/'
   }
@@ -96,9 +99,10 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0a192f" />
-        <meta name="msapplication-TileColor" content="#0a192f" />
-        <meta name="theme-color" content="#0a192f" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2f8060" />
+        <meta name="msapplication-TileColor" content="#101412" />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f8f6" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101412" />
       </head>
       <body className={`${GeistSans.className} bg-background text-foreground`}>
         <ThemeProvider

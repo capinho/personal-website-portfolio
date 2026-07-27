@@ -28,10 +28,11 @@ export function FloatingIndicator({ activeSection }: FloatingIndicatorProps) {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
-          className="fixed top-4 left-4 bg-black/40 backdrop-blur-sm text-white py-2 px-4 rounded-lg shadow-lg z-50 lg:hidden"
+          className="fixed left-4 top-4 z-20 rounded-full border border-border bg-card/85 px-4 py-2 text-foreground shadow-sm backdrop-blur-md lg:hidden"
         >
           <div className="flex items-center">
-            <h2 className="text-sm font-medium capitalize opacity-90">{activeSection}</h2>
+            <span className="mr-2 h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
+            <p className="text-xs font-semibold capitalize tracking-wide">{activeSection}</p>
           </div>
         </motion.div>
       )}

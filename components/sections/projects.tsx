@@ -38,24 +38,27 @@ export function Projects() {
     <motion.section
       ref={ref}
       id="projects"
-      className="pt-24 -mt-24 mb-24"
+      className="-mt-24 mb-28 pt-24"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-5xl font-bold text-[#ccd6f6] mb-12">Projects</h2>
-      <div className="space-y-16">
+      <div className="mb-10 flex items-center gap-4">
+        <span className="h-px w-10 bg-primary" aria-hidden="true" />
+        <h2 className="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">Projects</h2>
+      </div>
+      <div>
         {projects.map((project, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: index * 0.2 }}
-            className="group hover:bg-[#111111] rounded-lg p-6"
-            whileHover={{ x: 5 }}
+            className="group border-t border-border py-8 transition-colors hover:border-primary/40"
+            whileHover={{ x: 4 }}
           >
             <div className="flex justify-between items-start mb-4">
-              <h3 className="text-3xl font-semibold text-[#ccd6f6]">
+              <h3 className="text-xl font-semibold leading-snug text-foreground sm:text-2xl">
                 {project.title}
               </h3>
               <div className="flex gap-4">
@@ -63,7 +66,8 @@ export function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#8892b0] hover:text-[#64ffda] transition-colors"
+                  className="rounded-full p-2 text-muted-foreground hover:bg-accent hover:text-primary active:scale-[0.96]"
+                  aria-label={`View ${project.title} source code`}
                 >
                   <Github className="w-6 h-6" />
                 </a>
@@ -71,19 +75,20 @@ export function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#8892b0] hover:text-[#64ffda] transition-colors"
+                  className="rounded-full p-2 text-muted-foreground hover:bg-accent hover:text-primary active:scale-[0.96]"
+                  aria-label={`Open ${project.title}`}
                 >
                   <ExternalLink className="w-6 h-6" />
                 </a>
               </div>
             </div>
-            <p className="text-xl text-[#8892b0] mb-6">{project.description}</p>
-            <div className="flex flex-wrap gap-3">
+            <p className="mb-6 max-w-[65ch] text-base leading-relaxed text-muted-foreground">{project.description}</p>
+            <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
                 <Badge
                   key={tech}
                   variant="outline"
-                  className="bg-background/50 text-[#64ffda] border-[#64ffda]/20 px-3 py-1 text-sm"
+                  className="rounded-full border-border bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
                 >
                   {tech}
                 </Badge>

@@ -10,39 +10,46 @@ export function Experience() {
 
   const experiences = [
     {
-      date: "2022 — PRESENT",
-      title: "Software Engineer",
+      date: "FEB 2025 - PRESENT",
+      title: "Software Engineer - Performance Analytics & Data Platforms",
+      company: "BNP Paribas Asset Management",
+      description: "Builds scalable analytics platforms and Python services for portfolio analytics and engineering workflows. Develops high-performance pipelines processing millions of financial records across 15+ data sources, while improving throughput, reliability, and release validation.",
+      technologies: ["Python", "Pandas", "Polars", "NumPy", "AsyncIO", "PostgreSQL", "Redis"]
+    },
+    {
+      date: "NOV 2022 - OCT 2024",
+      title: "Software Engineer - Data & Performance Analytics",
       company: "SEGULA TECHNOLOGIE",
-      description: "Led the development of a scalable Web 3.0 marketplace using Next.js and microservices architecture on AWS. Built data scraping pipelines, integrated LLMs for automated classification, and implemented advanced semantic search algorithms.",
-      technologies: ["Next.js", "AWS", "Python", "LLMs", "Microservices"]
+      description: "Designed analytics platforms for predictive maintenance, semantic search, and engineering applications. Built backend services and ETL pipelines processing millions of telemetry events, with performance monitoring, regression detection, and automated validation.",
+      technologies: ["Python", "TypeScript", "React", "FastAPI", "Django", "Redis", "ETL"]
     },
     {
-      date: "2022",
-      title: "Fullstack Software Engineer",
+      date: "SEP 2022 - NOV 2022",
+      title: "Software Engineer - Analytics Platform",
       company: "GAWL, Paris",
-      description: "Developed an IPTV subscriber management system using Django and PostgreSQL. Created real-time dashboards with Pandas and AWS CloudWatch, maintained CI/CD pipeline for agile development.",
-      technologies: ["Django", "PostgreSQL", "Pandas", "AWS CloudWatch", "CI/CD"]
+      description: "Built a real-time analytics platform for operational and application performance metrics. Developed ETL pipelines, interactive dashboards, monitoring, alerting, and data-quality controls while reducing dashboard response time by 45%.",
+      technologies: ["Python", "Django", "Pandas", "PostgreSQL", "ETL", "Data Visualization"]
     },
     {
-      date: "2020 — 2022",
-      title: "Freelance Developer",
+      date: "2020 - 2022",
+      title: "Software Engineer",
       company: "Freelance",
-      description: "Designed and developed websites for IAAS Senegal, BestBira Events, and Cabinet Audit 360. Built a Safety Quality Environment platform with QR code generation and developed the Eiffage website, improving user engagement by 10%.",
-      technologies: ["Next.js", "React", "Node.js", "QR Code", "UX/UI"]
+      description: "Delivered custom backend systems, analytics platforms, APIs, and internal engineering tools for SMEs, from architecture and implementation through deployment, optimization, and long-term maintenance.",
+      technologies: ["Python", "Django", "REST APIs", "Analytics", "Data Platforms"]
     },
     {
-      date: "2017 — 2019",
-      title: "Fullstack Engineer",
+      date: "NOV 2017 - AUG 2019",
+      title: "Software Engineer",
       company: "SEDIMA GROUP",
-      description: "Built an internal e-commerce platform using Django and PostgreSQL for staff orders. Developed an incident management platform with automated workflows for streamlined reporting and resolution.",
-      technologies: ["Django", "PostgreSQL", "Automation", "Workflow Management"]
+      description: "Developed internal applications for order management, inventory, payments, and operational workflows. Built reporting tools and automated business processes while improving reliability and maintainability.",
+      technologies: ["Python", "Django", "PostgreSQL", "Reporting", "Automation"]
     },
     {
-      date: "2017",
+      date: "JUL 2017 - AUG 2017",
       title: "Backend Software Engineer",
       company: "Emc2 Group",
-      description: "Developed a Django-based platform for alumni engagement with user authentication. Provided comprehensive testing, documentation, and user training, ensuring high platform adoption.",
-      technologies: ["Django", "Authentication", "Testing", "Documentation"]
+      description: "Developed backend services and internal web applications with Python and Django. Designed reusable components, REST APIs, and structured data models, supported by automated testing.",
+      technologies: ["Python", "Django", "REST APIs", "Data Modeling", "Testing"]
     }
   ]
 
@@ -50,32 +57,35 @@ export function Experience() {
     <motion.section
       ref={ref}
       id="experience"
-      className="pt-24 -mt-24 mb-24"
+      className="-mt-24 mb-28 pt-24"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-5xl font-bold text-[#ccd6f6] mb-12">Experience</h2>
-      <div className="space-y-16">
+      <div className="mb-10 flex items-center gap-4">
+        <span className="h-px w-10 bg-primary" aria-hidden="true" />
+        <h2 className="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">Experience</h2>
+      </div>
+      <div>
         {experiences.map((experience, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: index * 0.2 }}
-            className="group hover:bg-[#111111] rounded-lg p-6"
-            whileHover={{ x: 5 }}
+            className="group border-t border-border py-8 transition-colors hover:border-primary/40"
+            whileHover={{ x: 4 }}
           >
-            <h3 className="text-3xl font-semibold text-[#ccd6f6] mb-2">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">{experience.date}</p>
+            <h3 className="mb-3 text-xl font-semibold leading-snug text-foreground sm:text-2xl">
               {experience.title} · {experience.company}
             </h3>
-            <p className="text-xl text-[#64ffda] mb-4">{experience.date}</p>
-            <p className="text-xl text-[#8892b0] mb-6">{experience.description}</p>
-            <div className="flex flex-wrap gap-3">
+            <p className="mb-6 max-w-[65ch] text-base leading-relaxed text-muted-foreground">{experience.description}</p>
+            <div className="flex flex-wrap gap-2">
               {experience.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="bg-background/50 text-[#64ffda] border border-[#64ffda]/20 px-3 py-1 text-sm rounded-full"
+                  className="rounded-full border border-border bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
                 >
                   {tech}
                 </span>
@@ -84,12 +94,12 @@ export function Experience() {
           </motion.div>
         ))}
       </div>
-      <div className="mt-12 text-center">
+      <div className="mt-8">
         <a
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-xl text-[#64ffda] hover:text-[#64ffda]/80 transition-colors"
+          className="inline-flex items-center rounded-full border border-primary/30 px-5 py-2.5 text-sm font-semibold text-primary hover:border-primary/60 hover:bg-primary/10 active:scale-[0.98]"
         >
           View Full Résumé
           <svg

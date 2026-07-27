@@ -17,46 +17,52 @@ export default function HomeContent() {
   const [activeSection, setActiveSection] = useState<string | null>(null)
   
   return (
-    <main className="relative min-h-screen bg-background antialiased">
+    <main className="relative min-h-[100dvh] overflow-x-clip bg-background antialiased">
       <AnimatedBackground />
       <FloatingIndicator activeSection={activeSection} />
       
-      <div className="fixed top-4 right-4">
+      <div className="fixed right-4 top-4 z-20 sm:right-6 sm:top-6">
         <ThemeToggle />
       </div>
 
-      <div className="container mx-auto px-4 py-12 md:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <div className="lg:col-span-4 lg:sticky lg:top-24 self-start space-y-8">
+      <div className="container relative z-10 mx-auto max-w-7xl px-5 py-16 sm:px-8 md:py-24 lg:px-10">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-12 xl:gap-20">
+          <div className="self-start lg:sticky lg:top-24 lg:col-span-5">
             <div>
-              <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+                Portfolio / 2026
+              </p>
+              <h1 className="max-w-md text-4xl font-semibold leading-none tracking-[-0.045em] text-foreground sm:text-5xl">
                 Pape DIAWARA
               </h1>
-              <p className="mt-6 text-3xl font-medium text-emerald-400">
+              <p className="mt-6 text-xl font-medium leading-snug text-primary sm:text-2xl">
                 Software Engineer
+                <span className="mt-1 block text-base font-normal text-muted-foreground sm:text-lg">
+                  Performance Analytics & Data Platforms
+                </span>
               </p>
-              <div className="mt-10 flex flex-col gap-5 text-xl text-muted-foreground">
-                <div className="flex items-center gap-4">
-                  <MapPin className="h-6 w-6" />
+              <div className="mt-8 flex flex-col gap-5 text-base text-muted-foreground">
+                <div className="flex items-center gap-3">
+                  <MapPin className="h-5 w-5 text-primary" />
                   <span>Paris</span>
                 </div>
               </div>
-              <p className="mt-10 text-2xl text-muted-foreground">
-                I'm a passionate software engineer specializing in Python, web technologies, AI, and machine learning.
+              <p className="mt-8 max-w-[38rem] text-lg leading-relaxed text-muted-foreground lg:max-w-sm">
+                I build scalable analytics platforms, high-performance data pipelines, and backend systems that turn complex telemetry into actionable insights.
               </p>
             </div>
             
-            <div className="mt-14">
+            <div className="mt-12">
               <Navigation onSectionChange={setActiveSection} />
             </div>
             
-            <div className="mt-10">
+            <div className="mt-10 border-t border-border pt-6 lg:max-w-sm">
               <Social />
             </div>
           </div>
 
-          <div className="lg:col-span-8">
-            <div className="prose prose-invert prose-xl max-w-none">
+          <div className="lg:col-span-7">
+            <div className="prose max-w-none dark:prose-invert">
               <About />
               <Experience />
               <Projects />

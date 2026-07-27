@@ -1,8 +1,8 @@
 {
-    "name": "Pape DIAWARA - Software Engineer",
+    "name": "Pape DIAWARA - Performance Analytics & Data Platforms",
     "short_name": "Pape DIAWARA",
-    "description": "Software Engineer specializing in full-stack development, data engineering, and AI applications",
-    "start_url": "https://pidiawara.co",
+    "description": "Software engineer specializing in performance analytics, data platforms, and backend engineering",
+    "start_url": "https://pidiawara.com",
     "scope": "/",
     "icons": [
         {
@@ -18,8 +18,8 @@
             "purpose": "any maskable"
         }
     ],
-    "theme_color": "#0a192f",
-    "background_color": "#0a192f",
+    "theme_color": "#101412",
+    "background_color": "#101412",
     "display": "standalone",
     "orientation": "portrait"
 }

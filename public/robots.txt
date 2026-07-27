@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://pidiawara.co/sitemap.xml
+Sitemap: https://pidiawara.com/sitemap.xml

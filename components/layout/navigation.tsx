@@ -38,7 +38,7 @@ export function Navigation({ onSectionChange }: NavigationProps) {
   }, [onSectionChange])
 
   return (
-    <nav className="hidden lg:flex flex-col gap-4 text-xl">
+    <nav className="hidden lg:flex flex-col gap-2" aria-label="Page sections">
       {[
         ['ABOUT', '#about'],
         ['EXPERIENCE', '#experience'],
@@ -49,12 +49,19 @@ export function Navigation({ onSectionChange }: NavigationProps) {
           key={href}
           href={href}
           className={cn(
-            'text-muted-foreground hover:text-foreground transition-colors',
+            'group flex w-fit items-center gap-3 py-1 text-xs font-semibold tracking-[0.16em] text-muted-foreground hover:text-foreground',
             activeSection === href.slice(1)
-              ? 'text-emerald-400'
+              ? 'text-primary'
               : ''
           )}
         >
+          <span
+            className={cn(
+              'h-px w-5 bg-border transition-[width,background-color] duration-200 group-hover:w-9 group-hover:bg-foreground',
+              activeSection === href.slice(1) ? 'w-9 bg-primary' : ''
+            )}
+            aria-hidden="true"
+          />
           {label}
         </CustomLink>
       ))}

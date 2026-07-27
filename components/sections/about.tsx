@@ -12,49 +12,52 @@ export function About() {
     <motion.section
       ref={ref}
       id="about"
-      className="pt-24 -mt-24 mb-24"
+      className="-mt-24 mb-28 pt-24"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-5xl font-bold text-[#ccd6f6] mb-12">About</h2>
+      <div className="mb-10 flex items-center gap-4">
+        <span className="h-px w-10 bg-primary" aria-hidden="true" />
+        <h2 className="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">About</h2>
+      </div>
       <motion.div
-        className="space-y-8"
+        className="space-y-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
         <motion.p 
-          className="text-xl text-[#8892b0] hover:bg-[#111111] rounded-lg p-6"
+          className="max-w-[65ch] text-lg leading-relaxed text-muted-foreground"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
-          Hello! I'm a software engineer based in Paris, France, with a strong foundation in computer science and a passion for building innovative solutions.
+          I'm a software engineer based in Paris, specializing in performance analytics, data platforms, and backend engineering.
         </motion.p>
         <motion.p 
-          className="text-xl text-[#8892b0] hover:bg-[#111111] rounded-lg p-6"
+          className="max-w-[65ch] text-lg leading-relaxed text-muted-foreground"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
-          I specialize in developing robust backend systems, scalable web applications, and data engineering solutions. My expertise includes:
+          I build production software that helps engineering teams measure application performance, identify regressions, and make data-driven decisions. My expertise includes:
         </motion.p>
         <motion.ul 
-          className="list-disc list-inside space-y-4 text-xl text-[#8892b0] hover:bg-[#111111] rounded-lg p-6 ml-4"
+          className="grid list-none gap-x-8 gap-y-4 py-2 text-base leading-relaxed text-muted-foreground sm:grid-cols-2"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
-          <motion.li>Full-stack development with Python (Django, FastAPI) and React/Next.js</motion.li>
-          <motion.li>Cloud infrastructure and DevOps on AWS</motion.li>
-          <motion.li>Machine Learning and AI applications</motion.li>
-          <motion.li>Database design and optimization (PostgreSQL, MongoDB)</motion.li>
-          <motion.li>Data Engineering: Building scalable data pipelines, web scraping solutions, and automated ETL workflows</motion.li>
+          <motion.li className="border-l-2 border-primary/35 pl-4">Performance monitoring, benchmarking, experimentation, and root cause analysis</motion.li>
+          <motion.li className="border-l-2 border-primary/35 pl-4">Backend engineering with Python, FastAPI, Django, REST APIs, and AsyncIO</motion.li>
+          <motion.li className="border-l-2 border-primary/35 pl-4">Large-scale data processing with Pandas, Polars, NumPy, and SQL</motion.li>
+          <motion.li className="border-l-2 border-primary/35 pl-4">ETL pipelines, data modeling, validation, quality, and visualization</motion.li>
+          <motion.li className="border-l-2 border-primary/35 pl-4">Production infrastructure with AWS, Docker, Kubernetes, PostgreSQL, Redis, and CI/CD</motion.li>
         </motion.ul>
         <motion.p 
-          className="text-xl text-[#8892b0] hover:bg-[#111111] rounded-lg p-6"
+          className="max-w-[65ch] text-lg leading-relaxed text-muted-foreground"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
-          I'm particularly passionate about data engineering and AI applications. I enjoy architecting end-to-end data solutions, from building efficient web scrapers and data pipelines to implementing automated workflows that transform raw data into actionable insights.
+          I enjoy turning complex financial and engineering telemetry into reliable platforms, reusable APIs, and operational insights. My work combines software engineering, statistical analysis, observability, and performance optimization.
         </motion.p>
       </motion.div>
     </motion.section>

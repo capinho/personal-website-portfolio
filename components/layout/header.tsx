@@ -16,9 +16,9 @@ export function Header() {
   const { setTheme } = useTheme()
 
   return (
-    <header className="fixed w-full bg-background/80 backdrop-blur-sm z-50">
+    <header className="fixed z-20 w-full border-b border-border bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-lg font-semibold text-slate-200">Pape DIAWARA</h1>
+        <p className="text-lg font-semibold text-foreground">Pape DIAWARA</p>
         <nav>
           <ul className="hidden lg:flex space-x-4 items-center">
             <li><a href="#about" className="hover:text-primary">About</a></li>
