@@ -1,13 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useRef } from 'react'
-import { useIntersectionObserver } from '@/hooks/use-intersection-observer'
+import { ArrowSquareOut } from '@phosphor-icons/react'
 
 export function Experience() {
-  const ref = useRef<HTMLElement>(null)
-  const isIntersecting = useIntersectionObserver(ref, { threshold: 0.5 })
-
   const experiences = [
     {
       date: "FEB 2025 - PRESENT",
@@ -55,7 +51,6 @@ export function Experience() {
 
   return (
     <motion.section
-      ref={ref}
       id="experience"
       className="-mt-24 mb-28 pt-24"
       initial={{ opacity: 0, y: 20 }}
@@ -102,20 +97,7 @@ export function Experience() {
           className="inline-flex items-center rounded-full border border-primary/30 px-5 py-2.5 text-sm font-semibold text-primary hover:border-primary/60 hover:bg-primary/10 active:scale-[0.98]"
         >
           View Full Résumé
-          <svg
-            className="ml-2 w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-            />
-          </svg>
+          <ArrowSquareOut className="ml-2 h-5 w-5" weight="regular" />
         </a>
       </div>
     </motion.section>

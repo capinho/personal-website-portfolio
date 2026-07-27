@@ -1,14 +1,16 @@
 "use client"
 
 import * as React from "react"
-import { Moon, Sun } from 'lucide-react'
+import { Moon, Sun } from '@phosphor-icons/react'
 import { useTheme } from "next-themes"
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme()
-  const [mounted, setMounted] = React.useState(false)
-
-  React.useEffect(() => setMounted(true), [])
+  const mounted = React.useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  )
 
   if (!mounted) {
     return <div className="h-11 w-11" aria-hidden="true" />
@@ -25,9 +27,9 @@ export function ThemeToggle() {
       title={isLight ? 'Dark mode' : 'Light mode'}
     >
       {isLight ? (
-        <Moon className="h-[1.2rem] w-[1.2rem]" />
+        <Moon className="h-[1.2rem] w-[1.2rem]" weight="regular" />
       ) : (
-        <Sun className="h-[1.2rem] w-[1.2rem]" />
+        <Sun className="h-[1.2rem] w-[1.2rem]" weight="regular" />
       )}
     </button>
   )

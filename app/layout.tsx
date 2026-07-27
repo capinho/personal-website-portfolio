@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/toaster'
@@ -6,8 +6,8 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Pape Ibrahima Diawara',
-    default: 'Pape Ibrahima Diawara - Performance Analytics & Data Platforms',
+    template: '%s | Pape DIAWARA',
+    default: 'Pape DIAWARA - Performance Analytics & Data Platforms',
   },
   description: 'Software engineer specializing in performance analytics, data platforms, and backend engineering.',
   keywords: [
@@ -35,20 +35,11 @@ export const metadata: Metadata = {
     title: 'Pape DIAWARA - Performance Analytics & Data Platforms',
     description: 'Software engineer specializing in performance analytics, data platforms, and backend engineering.',
     siteName: 'Pape DIAWARA Portfolio',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Pape DIAWARA - Performance Analytics & Data Platforms'
-      }
-    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Pape DIAWARA - Performance Analytics & Data Platforms',
     description: 'Software engineer specializing in performance analytics, data platforms, and backend engineering.',
-    images: ['/og-image.png']
   },
   robots: {
     index: true,
@@ -76,14 +67,17 @@ export const metadata: Metadata = {
     ]
   },
   manifest: '/site.webmanifest',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f6f8f6' },
-    { media: '(prefers-color-scheme: dark)', color: '#101412' }
-  ],
   metadataBase: new URL('https://pidiawara.com'),
   alternates: {
     canonical: '/'
   }
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f6f8f6' },
+    { media: '(prefers-color-scheme: dark)', color: '#101412' }
+  ]
 }
 
 export default function RootLayout({
@@ -93,17 +87,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2f8060" />
-        <meta name="msapplication-TileColor" content="#101412" />
-        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f8f6" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101412" />
-      </head>
       <body className={`${GeistSans.className} bg-background text-foreground`}>
         <ThemeProvider
           attribute="class"

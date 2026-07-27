@@ -105,12 +105,12 @@ This project is licensed under the MIT License.
 
 Feel free to reach out if you have any questions or just want to connect!
 
-- 👨‍💻 **Name**: Pape Ibrahima Diawara
-- 💼 **Role**: Software Engineer
-- 🔗 **LinkedIn**: [Pape Ibrahima Diawara](https://www.linkedin.com/in/pape-ibrahima-diawara/)
-- 📧 **Email**: [papeibrahima.diawara@outlook.com](mailto:papeibrahima.diawara@outlook.com)
-- 🌐 **GitHub**: [capinho](https://github.com/capinho)
-- 🌍 **Portfolio**: [https://personal-website-portfolio.vercel.app/](https://personal-website-portfolio.vercel.app/)
+- **Name**: Pape DIAWARA
+- **Role**: Software Engineer - Performance Analytics & Data Platforms
+- **LinkedIn**: [Pape Ibrahima Diawara](https://www.linkedin.com/in/pape-ibrahima-diawara/)
+- **Email**: [pidiawara56@gmail.com](mailto:pidiawara56@gmail.com)
+- **GitHub**: [capinho](https://github.com/capinho)
+- **Portfolio**: [https://pidiawara.com](https://pidiawara.com)
 
 ## 📸 Screenshots
 

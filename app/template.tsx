@@ -1,5 +1,3 @@
-'use client'
-
 import { GoogleAnalytics } from '@/components/features/analytics'
 
 export default function Template({ children }: { children: React.ReactNode }) {

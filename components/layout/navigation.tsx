@@ -4,17 +4,13 @@ import { CustomLink } from '@/components/ui/link'
 import { cn } from '@/lib/utils'
 import { useEffect, useState } from 'react'
 
-interface NavigationProps {
-  onSectionChange?: (section: string) => void;
-}
-
-export function Navigation({ onSectionChange }: NavigationProps) {
+export function Navigation() {
   const [activeSection, setActiveSection] = useState<string>('about')
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['about', 'experience', 'projects', 'contact']
-      const scrollPosition = window.scrollY + 100
+      const scrollPosition = window.scrollY + Math.min(160, window.innerHeight * 0.3)
 
       for (const section of sections) {
         const element = document.getElementById(section)
@@ -25,7 +21,6 @@ export function Navigation({ onSectionChange }: NavigationProps) {
             scrollPosition < offsetTop + offsetHeight
           ) {
             setActiveSection(section)
-            onSectionChange?.(section)
             break
           }
         }
@@ -33,31 +28,32 @@ export function Navigation({ onSectionChange }: NavigationProps) {
     }
 
     window.addEventListener('scroll', handleScroll)
-    handleScroll() // Check initial position
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [onSectionChange])
+  }, [])
 
   return (
-    <nav className="hidden lg:flex flex-col gap-2" aria-label="Page sections">
+    <nav className="flex flex-wrap gap-2 lg:flex-col" aria-label="Page sections">
       {[
         ['ABOUT', '#about'],
         ['EXPERIENCE', '#experience'],
-        ['PROJECTS', '#projects'],
+        ['SELECTED WORK', '#projects'],
         ['CONTACT', '#contact'],
       ].map(([label, href]) => (
         <CustomLink
           key={href}
           href={href}
           className={cn(
-            'group flex w-fit items-center gap-3 py-1 text-xs font-semibold tracking-[0.16em] text-muted-foreground hover:text-foreground',
+            'group flex min-h-11 w-fit items-center gap-3 rounded-full border border-border px-3 text-[0.7rem] font-semibold tracking-[0.12em] text-muted-foreground hover:border-primary/40 hover:text-foreground lg:min-h-0 lg:rounded-none lg:border-0 lg:px-0 lg:py-1 lg:text-xs lg:tracking-[0.16em]',
             activeSection === href.slice(1)
-              ? 'text-primary'
+              ? 'border-primary/40 bg-primary/10 text-primary lg:bg-transparent'
               : ''
           )}
+          aria-current={activeSection === href.slice(1) ? 'location' : undefined}
         >
           <span
             className={cn(
-              'h-px w-5 bg-border transition-[width,background-color] duration-200 group-hover:w-9 group-hover:bg-foreground',
+              'hidden h-px w-5 bg-border transition-[width,background-color] duration-200 group-hover:w-9 group-hover:bg-foreground lg:block',
               activeSection === href.slice(1) ? 'w-9 bg-primary' : ''
             )}
             aria-hidden="true"

@@ -1,16 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useRef } from 'react'
-import { useIntersectionObserver } from '@/hooks/use-intersection-observer'
 
 export function About() {
-  const ref = useRef<HTMLElement>(null)
-  const isIntersecting = useIntersectionObserver(ref, { threshold: 0.5 })
-
   return (
     <motion.section
-      ref={ref}
       id="about"
       className="-mt-24 mb-28 pt-24"
       initial={{ opacity: 0, y: 20 }}
@@ -32,7 +26,7 @@ export function About() {
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
-          I'm a software engineer based in Paris, specializing in performance analytics, data platforms, and backend engineering.
+          I’m a software engineer based in Paris, specializing in performance analytics, data platforms, and backend engineering.
         </motion.p>
         <motion.p 
           className="max-w-[65ch] text-lg leading-relaxed text-muted-foreground"

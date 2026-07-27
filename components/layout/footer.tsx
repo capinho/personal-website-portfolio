@@ -1,6 +1,5 @@
 'use client'
 
-import { Heart, Sparkles } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export function Footer() {
@@ -12,17 +11,11 @@ export function Footer() {
       transition={{ delay: 0.2 }}
     >
       <motion.p 
-        className="mx-auto inline-flex items-center justify-center gap-2 px-5 text-sm text-muted-foreground"
+        className="mx-auto inline-flex items-center justify-center px-5 text-sm text-muted-foreground"
         whileHover={{ y: -5 }}
         transition={{ duration: 0.2 }}
       >
-        <Sparkles className="h-4 w-4 text-primary" />
-        Crafted with{' '}
-        <span className="text-primary">
-          <Heart className="inline h-4 w-4 animate-pulse" aria-label="love" />
-        </span>{' '}
-        by Pape DIAWARA{' '}
-        <Sparkles className="h-4 w-4 text-primary" />
+        Designed and built by Pape DIAWARA · Paris
       </motion.p>
     </motion.footer>
   )
