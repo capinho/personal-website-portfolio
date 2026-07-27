@@ -1,29 +1,25 @@
 'use client'
 
 import NextLink from 'next/link'
+import type { AnchorHTMLAttributes, ReactNode } from 'react'
 
-interface CustomLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface CustomLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export function CustomLink({ href, children, ...props }: CustomLinkProps) {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    if (href.startsWith('#')) {
-      e.preventDefault()
-      const element = document.querySelector(href)
-      element?.scrollIntoView({ behavior: 'smooth' })
-    }
-    
-    if (props.onClick) {
-      props.onClick(e)
-    }
+  if (href.startsWith('#')) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    )
   }
 
   return (
     <NextLink 
       href={href} 
-      onClick={handleClick} 
       {...props}
       className={props.className || ''}
     >

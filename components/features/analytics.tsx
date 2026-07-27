@@ -5,10 +5,14 @@ import { useEffect } from 'react'
 
 export function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_ID: string }) {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (GA_MEASUREMENT_ID && typeof window !== 'undefined' && typeof window.gtag === 'function') {
       window.gtag('config', GA_MEASUREMENT_ID)
     }
   }, [GA_MEASUREMENT_ID])
+
+  if (!GA_MEASUREMENT_ID) {
+    return null
+  }
 
   return (
     <>

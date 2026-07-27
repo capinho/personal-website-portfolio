@@ -1,6 +1,6 @@
 'use client'
 
-import { MapPin } from 'lucide-react'
+import { MapPin } from '@phosphor-icons/react'
 import { Navigation } from '@/components/layout/navigation'
 import { Social } from '@/components/social'
 import { About } from '@/components/sections/about'
@@ -9,17 +9,12 @@ import { Projects } from '@/components/sections/projects'
 import { Contact } from '@/components/sections/contact'
 import { Footer } from '@/components/layout/footer'
 import { AnimatedBackground } from '@/components/features/animated-background'
-import { FloatingIndicator } from '@/components/features/floating-indicator'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { useState } from 'react'
 
 export default function HomeContent() {
-  const [activeSection, setActiveSection] = useState<string | null>(null)
-  
   return (
     <main className="relative min-h-[100dvh] overflow-x-clip bg-background antialiased">
       <AnimatedBackground />
-      <FloatingIndicator activeSection={activeSection} />
       
       <div className="fixed right-4 top-4 z-20 sm:right-6 sm:top-6">
         <ThemeToggle />
@@ -27,7 +22,7 @@ export default function HomeContent() {
 
       <div className="container relative z-10 mx-auto max-w-7xl px-5 py-16 sm:px-8 md:py-24 lg:px-10">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-12 xl:gap-20">
-          <div className="self-start lg:sticky lg:top-24 lg:col-span-5">
+          <div className="self-start lg:sticky lg:top-12 lg:col-span-5">
             <div>
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-primary">
                 Portfolio / 2026
@@ -43,7 +38,7 @@ export default function HomeContent() {
               </p>
               <div className="mt-8 flex flex-col gap-5 text-base text-muted-foreground">
                 <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-primary" />
+                  <MapPin className="h-5 w-5 text-primary" weight="regular" />
                   <span>Paris</span>
                 </div>
               </div>
@@ -53,7 +48,7 @@ export default function HomeContent() {
             </div>
             
             <div className="mt-12">
-              <Navigation onSectionChange={setActiveSection} />
+              <Navigation />
             </div>
             
             <div className="mt-10 border-t border-border pt-6 lg:max-w-sm">
