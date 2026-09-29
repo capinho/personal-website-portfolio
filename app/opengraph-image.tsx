@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 
-export const alt = 'Pape DIAWARA - Performance Analytics & Data Platforms'
+export const alt = 'Pape DIAWARA - Python Software Engineer, Data & Research Platforms'
 export const size = {
   width: 1200,
   height: 630,
@@ -43,10 +43,10 @@ export default function OpenGraphImage() {
             Pape DIAWARA
           </div>
           <div style={{ color: '#5ac095', fontSize: 36, fontWeight: 600 }}>
-            Software Engineer
+            Python Software Engineer
           </div>
           <div style={{ color: '#a7b2aa', fontSize: 30 }}>
-            Performance Analytics & Data Platforms
+            Data & Research Platforms
           </div>
         </div>
         <div

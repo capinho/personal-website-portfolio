@@ -26,32 +26,32 @@ export function About() {
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
-          I’m a software engineer based in Paris, specializing in performance analytics, data platforms, and backend engineering.
+          I’m a Python software engineer based in Paris, building scalable data systems, backend services, and research-oriented platforms for production environments.
         </motion.p>
         <motion.p 
           className="max-w-[65ch] text-lg leading-relaxed text-muted-foreground"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
-          I build production software that helps engineering teams measure application performance, identify regressions, and make data-driven decisions. My expertise includes:
+          My work focuses on performance, reliability, and large-scale data processing. I develop tools and frameworks used by analytics and research teams, with expertise across:
         </motion.p>
         <motion.ul 
           className="grid list-none gap-x-8 gap-y-4 py-2 text-base leading-relaxed text-muted-foreground sm:grid-cols-2"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
-          <motion.li className="border-l-2 border-primary/35 pl-4">Performance monitoring, benchmarking, experimentation, and root cause analysis</motion.li>
-          <motion.li className="border-l-2 border-primary/35 pl-4">Backend engineering with Python, FastAPI, Django, REST APIs, and AsyncIO</motion.li>
-          <motion.li className="border-l-2 border-primary/35 pl-4">Large-scale data processing with Pandas, Polars, NumPy, and SQL</motion.li>
-          <motion.li className="border-l-2 border-primary/35 pl-4">ETL pipelines, data modeling, validation, quality, and visualization</motion.li>
-          <motion.li className="border-l-2 border-primary/35 pl-4">Production infrastructure with AWS, Docker, Kubernetes, PostgreSQL, Redis, and CI/CD</motion.li>
+          <motion.li className="border-l-2 border-primary/35 pl-4">Python with FastAPI and Django, plus JavaScript and TypeScript with Node.js and React</motion.li>
+          <motion.li className="border-l-2 border-primary/35 pl-4">Large-scale data processing with Pandas, NumPy, Polars, AsyncIO, and ETL pipelines</motion.li>
+          <motion.li className="border-l-2 border-primary/35 pl-4">Performance profiling, vectorized processing, memory optimization, and automated data classification</motion.li>
+          <motion.li className="border-l-2 border-primary/35 pl-4">AWS, Kubernetes, Docker, Helm, Redis, PostgreSQL, and distributed systems</motion.li>
+          <motion.li className="border-l-2 border-primary/35 pl-4">Testing with pytest and TDD, monitoring, code reviews, and GitLab CI/CD</motion.li>
         </motion.ul>
         <motion.p 
           className="max-w-[65ch] text-lg leading-relaxed text-muted-foreground"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
-          I enjoy turning complex financial and engineering telemetry into reliable platforms, reusable APIs, and operational insights. My work combines software engineering, statistical analysis, observability, and performance optimization.
+          I turn complex datasets and research workflows into reusable APIs, dependable data pipelines, and maintainable software that teams can operate with confidence.
         </motion.p>
       </motion.div>
     </motion.section>
