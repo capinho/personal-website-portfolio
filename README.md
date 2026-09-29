@@ -1,17 +1,17 @@
 # Personal Portfolio - Pape Ibrahima Diawara
 
-![Next.js](https://img.shields.io/badge/Next.js-13-black)
+![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC)
 
-A modern, responsive portfolio website built with Next.js 13, TypeScript, and Tailwind CSS. This portfolio showcases my professional experience, projects, and skills with a clean and interactive design.
+A modern, responsive portfolio website built with Next.js 16, TypeScript, and Tailwind CSS. This portfolio showcases my professional experience, projects, and skills with a clean and interactive design.
 
 ## ✨ Features
 
 - 🌓 Dark/Light mode support
 - 📱 Fully responsive design
 - 🎯 Modern and clean UI
-- ⚡ Fast page loads with Next.js 13
+- ⚡ Fast page loads with Next.js 16
 - 🔍 SEO optimized
 - 📊 Google Analytics integration
 - 🎨 Smooth animations and transitions
@@ -19,7 +19,7 @@ A modern, responsive portfolio website built with Next.js 13, TypeScript, and Ta
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js 13 (App Router)
+- **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **Analytics:** Google Analytics
@@ -30,7 +30,7 @@ A modern, responsive portfolio website built with Next.js 13, TypeScript, and Ta
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
+- Node.js 22
 - npm or yarn
 
 ### Installation
@@ -59,7 +59,7 @@ yarn dev
 ## 📁 Project Structure
 
 ```
-├── app/                  # Next.js 13 app directory
+├── app/                  # Next.js App Router directory
 │   ├── layout.tsx       # Root layout
 │   ├── page.tsx         # Home page
 │   └── ...             # Other pages
@@ -106,7 +106,7 @@ This project is licensed under the MIT License.
 Feel free to reach out if you have any questions or just want to connect!
 
 - **Name**: Pape DIAWARA
-- **Role**: Software Engineer - Performance Analytics & Data Platforms
+- **Role**: Python Software Engineer - Data & Research Platforms
 - **LinkedIn**: [Pape Ibrahima Diawara](https://www.linkedin.com/in/pape-ibrahima-diawara/)
 - **Email**: [pidiawara56@gmail.com](mailto:pidiawara56@gmail.com)
 - **GitHub**: [capinho](https://github.com/capinho)

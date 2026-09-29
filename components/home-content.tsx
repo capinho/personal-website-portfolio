@@ -4,6 +4,7 @@ import { MapPin } from '@phosphor-icons/react'
 import { Navigation } from '@/components/layout/navigation'
 import { Social } from '@/components/social'
 import { About } from '@/components/sections/about'
+import { Education } from '@/components/sections/education'
 import { Experience } from '@/components/sections/experience'
 import { Projects } from '@/components/sections/projects'
 import { Contact } from '@/components/sections/contact'
@@ -31,9 +32,9 @@ export default function HomeContent() {
                 Pape DIAWARA
               </h1>
               <p className="mt-6 text-xl font-medium leading-snug text-primary sm:text-2xl">
-                Software Engineer
+                Python Software Engineer
                 <span className="mt-1 block text-base font-normal text-muted-foreground sm:text-lg">
-                  Performance Analytics & Data Platforms
+                  Data & Research Platforms
                 </span>
               </p>
               <div className="mt-8 flex flex-col gap-5 text-base text-muted-foreground">
@@ -43,7 +44,7 @@ export default function HomeContent() {
                 </div>
               </div>
               <p className="mt-8 max-w-[38rem] text-lg leading-relaxed text-muted-foreground lg:max-w-sm">
-                I build scalable analytics platforms, high-performance data pipelines, and backend systems that turn complex telemetry into actionable insights.
+                I build scalable data systems, reliable Python services, and research-oriented platforms for analytics and engineering teams.
               </p>
             </div>
             
@@ -59,6 +60,7 @@ export default function HomeContent() {
           <div className="lg:col-span-7">
             <div className="prose max-w-none dark:prose-invert">
               <About />
+              <Education />
               <Experience />
               <Projects />
               <Contact />

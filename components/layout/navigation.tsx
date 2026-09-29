@@ -9,7 +9,7 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'experience', 'projects', 'contact']
+      const sections = ['about', 'education', 'experience', 'projects', 'contact']
       const scrollPosition = window.scrollY + Math.min(160, window.innerHeight * 0.3)
 
       for (const section of sections) {
@@ -36,6 +36,7 @@ export function Navigation() {
     <nav className="flex flex-wrap gap-2 lg:flex-col" aria-label="Page sections">
       {[
         ['ABOUT', '#about'],
+        ['EDUCATION', '#education'],
         ['EXPERIENCE', '#experience'],
         ['SELECTED WORK', '#projects'],
         ['CONTACT', '#contact'],

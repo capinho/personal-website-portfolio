@@ -7,45 +7,45 @@ export function Experience() {
   const experiences = [
     {
       date: "FEB 2025 - PRESENT",
-      title: "Software Engineer - Performance Analytics & Data Platforms",
+      title: "Data / Software Engineer",
       company: "BNP Paribas Asset Management",
-      description: "Builds scalable analytics platforms and Python services for portfolio analytics and engineering workflows. Develops high-performance pipelines processing millions of financial records across 15+ data sources, while improving throughput, reliability, and release validation.",
-      technologies: ["Python", "Pandas", "Polars", "NumPy", "AsyncIO", "PostgreSQL", "Redis"]
+      description: "Designs Python backend services and reusable data components for investment analytics and automated reporting. Builds asynchronous ingestion workflows across internal and external sources, consolidates portfolio, performance, risk, benchmark, and product datasets, and improves reliability through caching, monitoring, retries, and data-quality controls.",
+      technologies: ["Python", "Pandas", "NumPy", "Polars", "AsyncIO", "Kubernetes", "Redis", "PostgreSQL"]
     },
     {
       date: "NOV 2022 - OCT 2024",
-      title: "Software Engineer - Data & Performance Analytics",
+      title: "Software / Data Engineer",
       company: "SEGULA TECHNOLOGIE",
-      description: "Designed analytics platforms for predictive maintenance, semantic search, and engineering applications. Built backend services and ETL pipelines processing millions of telemetry events, with performance monitoring, regression detection, and automated validation.",
-      technologies: ["Python", "TypeScript", "React", "FastAPI", "Django", "Redis", "ETL"]
+      description: "Built Python microservices, APIs, data-modeling frameworks, and analytics backends for predictive-maintenance, Web3, and R&D platforms. Developed scraping and ingestion pipelines, asynchronous processing, semantic-search and LLM-based components, plus internal research and visualization tools.",
+      technologies: ["Python", "Django", "FastAPI", "Selenium", "BeautifulSoup", "Redis", "LLMs"]
     },
     {
       date: "SEP 2022 - NOV 2022",
-      title: "Software Engineer - Analytics Platform",
+      title: "Fullstack / Data Engineer",
       company: "GAWL, Paris",
-      description: "Built a real-time analytics platform for operational and application performance metrics. Developed ETL pipelines, interactive dashboards, monitoring, alerting, and data-quality controls while reducing dashboard response time by 45%.",
-      technologies: ["Python", "Django", "Pandas", "PostgreSQL", "ETL", "Data Visualization"]
+      description: "Built a Python and Django analytics platform backed by PostgreSQL. Designed ETL and aggregation pipelines for high-volume operational data, improved backend performance through SQL optimization and caching, and implemented validation, monitoring, and alerting.",
+      technologies: ["Python", "Django", "PostgreSQL", "ETL", "SQL", "Monitoring"]
     },
     {
-      date: "2020 - 2022",
-      title: "Software Engineer",
+      date: "2019 - 2022",
+      title: "Freelance Developer",
       company: "Freelance",
-      description: "Delivered custom backend systems, analytics platforms, APIs, and internal engineering tools for SMEs, from architecture and implementation through deployment, optimization, and long-term maintenance.",
-      technologies: ["Python", "Django", "REST APIs", "Analytics", "Data Platforms"]
+      description: "Designed and delivered Python backend applications, internal tools, and automation systems for SMEs. Managed projects end-to-end from requirements and architecture through deployment, maintenance, and performance improvements.",
+      technologies: ["Python", "Backend Systems", "Automation", "Architecture", "Deployment"]
     },
     {
-      date: "NOV 2017 - AUG 2019",
-      title: "Software Engineer",
+      date: "NOV 2017 - AUG 2018",
+      title: "Fullstack Engineer",
       company: "SEDIMA GROUP",
-      description: "Developed internal applications for order management, inventory, payments, and operational workflows. Built reporting tools and automated business processes while improving reliability and maintainability.",
-      technologies: ["Python", "Django", "PostgreSQL", "Reporting", "Automation"]
+      description: "Built internal platforms and structured data workflows for order, payment, and inventory management. Developed data-driven applications with automation and reporting features to improve internal processes.",
+      technologies: ["Data Workflows", "Automation", "Reporting", "Internal Platforms"]
     },
     {
       date: "JUL 2017 - AUG 2017",
       title: "Backend Software Engineer",
       company: "Emc2 Group",
-      description: "Developed backend services and internal web applications with Python and Django. Designed reusable components, REST APIs, and structured data models, supported by automated testing.",
-      technologies: ["Python", "Django", "REST APIs", "Data Modeling", "Testing"]
+      description: "Developed backend features for an internal alumni platform using Python and Django. Designed relational data models, user-management workflows, and administrative features, and contributed to testing, debugging, and maintenance.",
+      technologies: ["Python", "Django", "Relational Data Modeling", "Testing", "Debugging"]
     }
   ]
 
